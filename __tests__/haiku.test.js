@@ -19,8 +19,9 @@ describe('Poem', () => {
 
   test('should correctly identify if a character is a number', () => {
     let poem = new Poem();
-    poem.lineOne[0] = "5";
+    poem.lineOne[0] = "aslasdf5";
+    poem.lineTwo[0] = "4";
+    poem.lineThree[0] = "a";
     expect(poem.isNumber()).toEqual("it is a number");
   });
-
 });

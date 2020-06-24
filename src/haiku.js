@@ -10,12 +10,12 @@ export class Poem {
     this.lineTwo.push(inputLine2);
     this.lineThree.push(inputLine3);
   }
+
   isNumber() {
-    for(const element of this.lineOne) {
-      if (!isNaN(parseInt(element))){ //
+    let allString = this.lineOne[0].concat(this.lineTwo[0], this.lineThree[0]);
+    for(let element of allString) {
+      if (!isNaN(parseInt(element))) {
         return "it is a number";
-      } else{
-        return "is a not number";
       }
     }
   }
