@@ -25,7 +25,14 @@ export class Poem {
     }
   }
 
-  // isWord() {
+  isWord() {
+    let allString = this.allStrings();
+    let space = " ";
+    for(i = 0; i < allString.length; i++) {
+      
+    }
+  }
+
   //   //loop through array until space and slice everything prior to space
   //   // create a variable that is equal to the sliced off string
   //   // check to see whether that variable/string is included in dictionary
