@@ -14,6 +14,6 @@ describe('Poem', () => {
     poem.addLine("hi","bye","bro");
     expect(poem.lineOne[0]).toEqual("hi");
     expect(poem.lineTwo[0]).toEqual("bye");
-    expect(poem.lineThree[0]).toEqual(0);
+    expect(poem.lineThree[0]).toEqual("bro");
   });
 });
