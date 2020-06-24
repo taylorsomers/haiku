@@ -19,7 +19,7 @@ describe('Poem', () => {
 
   test('should correctly identify if a character is a number', () => {
     let poem = new Poem();
-    poem.lineOne[0] = "e";
+    poem.lineOne[0] = "5";
     expect(poem.isNumber()).toEqual("it is a number");
   });
 
