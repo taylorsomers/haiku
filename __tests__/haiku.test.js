@@ -9,7 +9,7 @@ describe('Poem', () => {
     expect(poem.lineThree).toEqual([]);
   });
   
-  test('should create a line object with three line properties', () => {
+  test('should populate poem object line properties with inputted content', () => {
     let poem = new Poem();
     poem.addLine("hi","bye","bro");
     expect(poem.lineOne[0]).toEqual("hi");
