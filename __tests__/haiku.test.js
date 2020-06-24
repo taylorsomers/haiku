@@ -16,4 +16,11 @@ describe('Poem', () => {
     expect(poem.lineTwo[0]).toEqual("bye");
     expect(poem.lineThree[0]).toEqual("bro");
   });
+
+  test('should correctly identify if a character is a number', () => {
+    let poem = new Poem();
+    poem.lineOne[0] = "e";
+    expect(poem.isNumber()).toEqual("it is a number");
+  });
+
 });
