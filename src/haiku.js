@@ -27,7 +27,8 @@ export class Poem {
 
   isWord() {
     let allString = this.allStrings();
-    let allStringArray = allString.split(" ");       
+    let allStringArray = allString.split(" "); 
+    return allStringArray;
   }
 
   //   //loop through array until space and slice everything prior to space
