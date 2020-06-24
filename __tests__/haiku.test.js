@@ -39,7 +39,7 @@ describe('Poem', () => {
     reusablePoem.lineTwo[0] = "hovering over the sea";
     reusablePoem.lineThree[0] = "part of my body";
     let allStringArray = reusablePoem.isWord();
-    
-    expect(allStringArray[0]).toEqual("dad");
+
+    expect(allStringArray[0]).toEqual("my");
   });
 });
