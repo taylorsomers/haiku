@@ -57,8 +57,14 @@ SECOND:
 
   | Program Behavior | Example Behavior | Example Output |
   | ----------- | ----------- | ----------- |
-  |  |  |  |
-  
+  |The Program checks if the user inputs are alphabetical characters| I love you 2 | "Please do not use non-alphabetical character" |
+  |The Program detects if the user inputted words are actual words | asdfk | "not a word" | 
+  |The Program confirms that the user input contains 3 lines| "My shining surfboard -- hovering over the sea -- Part of my body" | "Nice Haiku bro" |
+  | The program will determine where one word ends and the next begins | "My shining surfboard -- hovering over the sea -- Part of my body" | N/A |
+  |The Program confirms that there are 5 syllables in the first line | "My shining surfboard -- hovering over the sea -- Part of my body" | "Nice Haiku bro" |
+  |The Program confirms that there are 7 syllables in the second line | "My shining surfboard -- hovering over the sea -- Part of my body" | "Nice Haiku bro" |
+  |The Program confirms that there are 5 syllables in the third line | "My shining surfboard -- hovering over the sea -- Part of my body" | "Nice Haiku bro" |
+
 
 ## Known Bugs
 
