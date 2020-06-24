@@ -9,6 +9,11 @@ describe('Poem', () => {
     expect(poem.lineThree).toEqual([]);
   });
   
-  // test('should ')
-  //tests whether the line contains any unwanted nonalphanum char
+  test('should create a line object with three line properties', () => {
+    let poem = new Poem();
+    poem.addLine("hi","bye","bro");
+    expect(poem.lineOne[0]).toEqual("hi");
+    expect(poem.lineTwo[0]).toEqual("bye");
+    expect(poem.lineThree[0]).toEqual(0);
+  });
 });

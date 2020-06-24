@@ -4,14 +4,14 @@ export class Poem {
     this.lineTwo = [];
     this.lineThree = [];
   }
-  // unwanted() {
-  //   //access the line, method to go thru each char in the line, and flag unwanteds.
-    
-//   }
-//   addLine() {
-//     Poem_____.push(line1)
-//   }
-// }
-// function Line(){
-//   //user input line1
+
+  addLine(inputLine1, inputLine2, inputLine3) {
+    this.lineOne.push(inputLine1);
+    this.lineTwo.push(inputLine2);
+    this.lineThree.push(inputLine3);
+  }
 }
+
+
+// unwanted() {
+//   //access the line, method to go thru each char in the line, and flag unwanteds.
