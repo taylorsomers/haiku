@@ -33,4 +33,13 @@ describe('Poem', () => {
     reusablePoem.lineThree[0] = "a";
     expect(reusablePoem.allStrings()).toEqual("word54a");
   });
+
+  test('should create an array of words in the given allStringArray', () => {
+    reusablePoem.lineOne[0] = "my shining sufboard";
+    reusablePoem.lineTwo[0] = "hovering over the sea";
+    reusablePoem.lineThree[0] = "part of my body";
+    let allStringArray = reusablePoem.isWord();
+    
+    expect(allStringArray[0]).toEqual("dad");
+  });
 });
