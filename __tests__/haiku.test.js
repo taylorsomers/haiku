@@ -42,4 +42,8 @@ describe('Poem', () => {
 
     expect(allStringArray[0]).toEqual("my");
   });
+
+  test('should divide words into syllables', () => {
+    expect(reusablePoem.countSyllables()).toEqual(17);
+  });
 });
