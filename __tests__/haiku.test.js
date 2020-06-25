@@ -53,6 +53,6 @@ describe('Poem', () => {
   });
 
   test('should count the number of vowels in each word', () => {
-    expect(reusablePoem.countVowels()[0][0]).toEqual("a");
+    expect(reusablePoem.countVowels()[0][1]).toEqual(2);
   });
 });

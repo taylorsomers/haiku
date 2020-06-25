@@ -21,25 +21,42 @@ export class Poem {
     lineArray.push(this.lineOne[0].split(" "));
     lineArray.push(this.lineTwo[0].split(" "));
     lineArray.push(this.lineThree[0].split(" "));
-    console.log(lineArray[0]);
     return lineArray;
   }
 
   countVowels() { // Function will add 1 to count each time a syllable is detected
-    let vowelCount = 0;
-    let lineArray = this.lineArray[0].split(" ");
-
-    //reusablePoem.lineOne.countSyllables()
-    
-    for (let element of lineArray) {
-      for(let letter of element){
-        const regex = /[aeiou]/g;
-        if(letter.match(regex)){
-          vowelCount += 1;
-        } 
+    let vowelCountArray1 = [];
+    let vowelCountArray2 = [];
+    let vowelCountArray3 = [];     //vowelcountarray[0] = [0,2,3], vowelcountarray[1] = [3,2,2]
+    let loop =0;
+    for (let eachLineArray of this.splitLines()) {
+      for(let eachWord of eachLineArray) {
+        let vowelCountPerWord = 0;
+        for(let letter of eachWord) {
+          const regex = /[aeiou]/g;
+          if(letter.match(regex)) {
+            vowelCountPerWord += 1;  // will = the number of vowels in each word.
+          }  
+        }
+        if (loop === 0){        //1 push the 
+          vowelCountArray1.push(vowelCountPerWord);    //will push the total vowels in each word.
+        }
+        else if (loop === 1){
+          vowelCountArray2.push(vowelCountPerWord);
+        }
+        else if (loop === 2){
+          vowelCountArray3.push(vowelCountPerWord);
+        }
+        vowelCountPerWord = 0;
       }
+      loop += 1;
     }
-    return vowelCount;
+    let vowelCountPerline = [];
+    vowelCountPerline.push(vowelCountArray1);
+    vowelCountPerline.push(vowelCountArray2);
+    vowelCountPerline.push(vowelCountArray3);
+
+    return vowelCountPerline;
   }
 
   isNumber() {
