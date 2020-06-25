@@ -44,9 +44,16 @@ describe('Poem', () => {
     expect(allStringArray[0]).toEqual("my");
   });
 
-  // test('should divide words into syllables', () => {
-  //   expect(reusablePoem.lineOne.countSyllables()).toEqual(5);
-  // });
+  test('should track the number of syllables per line', () => {
+    expect(reusablePoem.countSyllables()[0]).toEqual(5);
+
+    // countSyllables() {
+    //   let numOfSyllable =0
+    //   countVowels()[0][0] += numOfSyllable
+    //   ify[0][0]
+    }
+
+  });
 
   test('should split lines into arrays of words', () => {
     expect(reusablePoem.splitLines()[0]).toEqual(["my","shining","surfboard"]);
