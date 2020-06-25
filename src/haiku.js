@@ -16,6 +16,32 @@ export class Poem {
     return allString;
   }
 
+  splitLines() {
+    let lineArray = [];
+    lineArray.push(this.lineOne[0].split(" "));
+    lineArray.push(this.lineTwo[0].split(" "));
+    lineArray.push(this.lineThree[0].split(" "));
+    console.log(lineArray[0]);
+    return lineArray;
+  }
+
+  countVowels() { // Function will add 1 to count each time a syllable is detected
+    let vowelCount = 0;
+    let lineArray = this.lineArray[0].split(" ");
+
+    //reusablePoem.lineOne.countSyllables()
+    
+    for (let element of lineArray) {
+      for(let letter of element){
+        const regex = /[aeiou]/g;
+        if(letter.match(regex)){
+          vowelCount += 1;
+        } 
+      }
+    }
+    return vowelCount;
+  }
+
   isNumber() {
     let allString = this.allStrings();
     for(let element of allString) {
@@ -30,9 +56,4 @@ export class Poem {
     let allStringArray = allString.split(" "); 
     return allStringArray;
   }
-
-  //   //loop through array until space and slice everything prior to space
-  //   // create a variable that is equal to the sliced off string
-  //   // check to see whether that variable/string is included in dictionary
-  // }
 }

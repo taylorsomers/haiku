@@ -58,5 +58,4 @@ describe('Poem', () => {
     // reusablePoem.splitLines();
     expect(reusablePoem.splitLines()[0]).toEqual(["my","shining","surfboard"]);
   });
-
 });
