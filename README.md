@@ -1,48 +1,27 @@
-Get Started:
+# Haiku Detector
 
-FIRST: [REMEMBER TO (1) CHANGE package.json PROJECT NAME AND DESCRIPTION TO CURRENT PROJECT NAME AND DESCRIPTION, (2) CHANGE TITLE OF HtmlWebpackPlugin IN webpack.config.js TO CURRENT PROJECT NAME, AND (3) CHANGE TITLE OF project-name.js IN SRC DIRECTORY TO NAME OF CURRENT PROJECT.]
-
-SECOND:
-  $ npm install
-  $ npm install dotenv-webpack --save-dev
-  $ git init
-  $ git add .gitignore
-  $ git commit -m "Activate .gitignore"
-  $ npm run build
-  $ git add .
-  $ git commit -m "Initial global commit"
-  $ npm run start
-
-# [Program Title]
-
-  ### By [Author(s)]
+  ### By Taylor Somers & Chris Yoon
 
 ## Description
 
-  [Description of program functionality & intent presented as an elevator pitch.]
+  This program is a work in progress created over two days as part of Epicodus's introduction to test-driven development. It was created with JavaScript and displays our ongoing process of understanding test-driven development via WebPack and Jest. While unfinished at this point due to time constraints, it should be a useful document of the increasing sophistication with which we are able to navigate the iterative team-based development process.
 
 ## Languages & Technologies Used:
 
   ### Programming Languages & Libraries
-  * Bootstrap
-  * CSS
-  * HTML
   * JavaScript
-  * jQuery
   * Node
   * WebPack
 
   ### Operating Systems & Programs
-  * Brave
   * Git Bash
-  * Google Chrome
   * Microsoft Windows 10
   * Visual Studio Code
 
 ## Installation
 
   1.  Download a web browser, such as Apple Safari, Brave, Google Chrome, Microsoft Edge, Mozilla Firefox, or Yandex.
-  2.  Navigate to [repository].
+  2.  Navigate to https://github.com/taylorsomers/haiku.
   3.  Click the green "Clone or download" button at the right of the screen.
   4.  Select "Download ZIP."
   5.  Use a file extractor or unzip program (such as PeaZip, Unzipper, WinZip, Zipware, or 7-ZIP) to extract the ZIP files onto your computer.
@@ -68,13 +47,13 @@ SECOND:
 
 ## Known Bugs
 
-  * No known bugs at this time. If any are discovered, please feel free to reach out and let me know. If you would like to contribute any fixes or improvements, please do!
+  * Apart from being unfinished at this time and lacking functionality to do more thorough analysis than counting standard vowels in inputted lines of poetry, no known bugs. If any are discovered, please feel free to reach out and let me know. If you would like to contribute any fixes or improvements, please do!
 
 ### Contributors
 
   * Taylor Somers
-  * [Other Contributor(s): Anyone who contributed at least %5 of the total product.]
+  * Chris Yoon
 
 ### License
 
-This website is licensed under the GNU General Public License GPLv3. (C) 2020 Taylor Somers. All rights reserved.
+This website is licensed under the GNU General Public License GPLv3. (C) 2020 Taylor Somers, Chris Yoon. All rights reserved.
