@@ -5,19 +5,24 @@ describe('Poem', () => {
   
   beforeEach(() => {
     reusablePoem = new Poem();
+    reusablePoem.lineOne[0] = "my shining surfboard";
+    reusablePoem.lineTwo[0] = "hovering over the sea";
+    reusablePoem.lineThree[0] = "part of my body";
   });
   
   test('should create a reusablePoem object with three arrays', () => {
-    expect(reusablePoem.lineOne).toEqual([]);
-    expect(reusablePoem.lineTwo).toEqual([]);
-    expect(reusablePoem.lineThree).toEqual([]);
+    expect(reusablePoem.lineOne[0]).toEqual("my shining surfboard");
+    expect(reusablePoem.lineTwo[0]).toEqual("hovering over the sea");
+    expect(reusablePoem.lineThree[0]).toEqual("part of my body");
   });
-  
+
   test('should populate reusablePoem object line properties with inputted content', () => {
-    reusablePoem.addLine("hi","bye","bro");
-    expect(reusablePoem.lineOne[0]).toEqual("hi");
-    expect(reusablePoem.lineTwo[0]).toEqual("bye");
-    expect(reusablePoem.lineThree[0]).toEqual("bro");
+    let inputLine1 = "word5";
+    let inputLine2 = "4";
+    let inputLine3 = "a";
+    let newPoem = new Poem();
+    newPoem.addLine(inputLine1, inputLine2, inputLine3);
+    expect(newPoem.lineOne[0]).toEqual("word5");
   });
 
   test('should correctly identify if a character is a number', () => {
@@ -35,27 +40,19 @@ describe('Poem', () => {
   });
 
   test('should create an array of words in the given allStringArray', () => {
-    reusablePoem.lineOne[0] = "my shining surfboard";
-    reusablePoem.lineTwo[0] = "hovering over the sea";
-    reusablePoem.lineThree[0] = "part of my body";
     let allStringArray = reusablePoem.isWord();
-
     expect(allStringArray[0]).toEqual("my");
   });
 
-  test('should divide words into syllables', () => {
-    reusablePoem.lineOne[0] = "my shining surfboard";
-    reusablePoem.lineTwo[0] = "hovering over the sea";
-    reusablePoem.lineThree[0] = "part of my body";
-    expect(reusablePoem.lineOne.countSyllables()).toEqual(5);
-  });
+  // test('should divide words into syllables', () => {
+  //   expect(reusablePoem.lineOne.countSyllables()).toEqual(5);
+  // });
 
   test('should split lines into arrays of words', () => {
-    reusablePoem.lineOne[0] = "my shining surfboard";
-    reusablePoem.lineTwo[0] = "hovering over the sea";
-    reusablePoem.lineThree[0] = "part of my body";
-    let lineArray = [];
-    // reusablePoem.splitLines();
     expect(reusablePoem.splitLines()[0]).toEqual(["my","shining","surfboard"]);
+  });
+
+  test('should count the number of vowels in each word', () => {
+    expect(reusablePoem.countVowels()[0][0]).toEqual("a");
   });
 });
