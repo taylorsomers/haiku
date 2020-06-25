@@ -46,13 +46,7 @@ describe('Poem', () => {
 
   test('should track the number of syllables per line', () => {
     expect(reusablePoem.countSyllables()[0]).toEqual(5);
-
-    // countSyllables() {
-    //   let numOfSyllable =0
-    //   countVowels()[0][0] += numOfSyllable
-    //   ify[0][0]
-    }
-
+    
   });
 
   test('should split lines into arrays of words', () => {

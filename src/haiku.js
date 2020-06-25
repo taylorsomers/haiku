@@ -73,4 +73,28 @@ export class Poem {
     let allStringArray = allString.split(" "); 
     return allStringArray;
   }
+
+  countSyllables() {
+    
+    // let numOfSyllable = 0; //+= numOfSyllable
+    let syllablesPerLine = [];
+    let syllableCountLine1= [];  // [my 0,shining 2,  suerfgbb 3]
+    let syllableCountLine2= [];
+    let syllableCountLine3= [];
+    
+    for (let i = 0; i < (this.countVowels()).length; i++) { // loop through each line of this.countVowels()
+      if (i === 0) {
+        syllableCountLine1.push(this.countVowels()[i]); // push vowel count of each word into line array
+      } else if (i === 1) {
+        syllableCountLine2.push(this.countVowels()[i]);
+      } else {
+        syllableCountLine3.push(this.countVowels()[i]);
+      }
+    }
+
+    
+    syllablesPerLine.push(syllableCountLine1);
+    syllablesPerLine.push(syllableCountLine2);
+    syllablesPerLine.push(syllableCountLine3);
+  }
 }
