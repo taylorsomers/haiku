@@ -35,7 +35,7 @@ describe('Poem', () => {
   });
 
   test('should create an array of words in the given allStringArray', () => {
-    reusablePoem.lineOne[0] = "my shining sufboard";
+    reusablePoem.lineOne[0] = "my shining surfboard";
     reusablePoem.lineTwo[0] = "hovering over the sea";
     reusablePoem.lineThree[0] = "part of my body";
     let allStringArray = reusablePoem.isWord();
@@ -44,6 +44,19 @@ describe('Poem', () => {
   });
 
   test('should divide words into syllables', () => {
-    expect(reusablePoem.countSyllables()).toEqual(17);
+    reusablePoem.lineOne[0] = "my shining surfboard";
+    reusablePoem.lineTwo[0] = "hovering over the sea";
+    reusablePoem.lineThree[0] = "part of my body";
+    expect(reusablePoem.lineOne.countSyllables()).toEqual(5);
   });
+
+  test('should split lines into arrays of words', () => {
+    reusablePoem.lineOne[0] = "my shining surfboard";
+    reusablePoem.lineTwo[0] = "hovering over the sea";
+    reusablePoem.lineThree[0] = "part of my body";
+    let lineArray = [];
+    // reusablePoem.splitLines();
+    expect(reusablePoem.splitLines()[0]).toEqual(["my","shining","surfboard"]);
+  });
+
 });
